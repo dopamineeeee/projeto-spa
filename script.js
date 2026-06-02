@@ -30,6 +30,8 @@ botoes.forEach(botao => {
 //não utilizei toogle porque ele é mais comum para somente um elemento.
 
 
+ // IMC
+
 const form = document.getElementById("formimc");
 
 form.addEventListener("submit", function(event) {
@@ -44,9 +46,41 @@ form.addEventListener("submit", function(event) {
     const resultadoImc = peso/altura**2
     console.log(resultadoImc)
 
+    if(resultadoImc <= 18.5){
+
     document.getElementById("resultado").innerText =
-        `Resultado do IMC é: ${resultadoImc.toFixed(2)}`;
+        `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está abaixo do peso.` ;
+    
+    }
+
+    if(resultadoImc > 18.5 && resultadoImc <= 24.9){
+
+    document.getElementById("resultado").innerText =
+        `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está com peso normal.` ;
+
+    }
+
+    if(resultadoImc > 25 && resultadoImc <= 29.9){
+
+    document.getElementById("resultado").innerText =
+        `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está com sobrepeso.` ;
+
+    }
+
+    if(resultadoImc >= 30) {
+
+    document.getElementById("resultado").innerText =
+        `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você é obeso.` ;
+
+    }
     
     
 });
+
+//IMC
+
+
+    
+
+
 
