@@ -52,6 +52,10 @@
 
                         <input id="peso" type="text" placeholder="Digite seu Peso">
                         <input id="altura" type="number" step="0.01" placeholder="Digite sua Altura">
+                        <select id="unidade">
+                            <option value="homem">Homem</option>
+                            <option value="mulher">Mulher</option>
+                        </select>
                         <button type="submit">Calcular</button>
 
                     </form>
@@ -59,7 +63,7 @@
                     <br>
                     <br>
 
-                    <p id="resultado"></p>
+                    <p id="resultadoimc"></p>
 
                 </div>
 
@@ -68,6 +72,26 @@
 
                 <div id="temperatura" class="ferramenta">
                     <h2>Conversor de Temperatura</h2>
+
+                    <br>
+                    <br>
+
+                    <form id="formtemperatura">
+
+                        <input id="temperatura" type="number" step="0.01" placeholder="Digite a Temperatura">
+                        <select id="unidade">
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+                        <button type="submit">Converter</button>
+
+                    </form>
+
+                    <br>
+                    <br>
+
+                    <p id="resultadotemperatura"></p>
+
                 </div>
 
                 <div id="velocidade" class="ferramenta">

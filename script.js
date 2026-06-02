@@ -46,38 +46,77 @@ form.addEventListener("submit", function(event) {
     const resultadoImc = peso/altura**2
     console.log(resultadoImc)
 
-    if(resultadoImc <= 18.5){
+    const sexo = document.getElementById("unidade").value;
 
-    document.getElementById("resultado").innerText =
-        `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está abaixo do peso.` ;
-    
+    if (sexo === "homem") {
+
+        if(resultadoImc <= 18.5){
+
+        document.getElementById("resultadoimc").innerText =
+            `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está abaixo do peso.` ;
+        
+        }
+
+        if(resultadoImc > 18.5 && resultadoImc <= 24.9){
+
+        document.getElementById("resultadoimc").innerText =
+            `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está com peso normal.` ;
+
+        }
+
+        if(resultadoImc > 25 && resultadoImc <= 29.9){
+
+        document.getElementById("resultadoimc").innerText =
+            `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está com sobrepeso.` ;
+
+        }
+
+        if(resultadoImc >= 30) {
+
+        document.getElementById("resultadoimc").innerText =
+            `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você é obeso.` ;
+
+        }
     }
 
-    if(resultadoImc > 18.5 && resultadoImc <= 24.9){
+    else if (sexo === "mulher") {
 
-    document.getElementById("resultado").innerText =
-        `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está com peso normal.` ;
+        if(resultadoImc <= 18.5){
+
+        document.getElementById("resultadoimc").innerText =
+            `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está abaixo do peso.` ;
+        
+        }
+
+        if(resultadoImc > 18.5 && resultadoImc <= 23.9){
+
+        document.getElementById("resultadoimc").innerText =
+            `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está com peso normal.` ;
+
+        }
+
+        if(resultadoImc > 24 && resultadoImc <= 28.9){
+
+        document.getElementById("resultadoimc").innerText =
+            `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está com sobrepeso.` ;
+
+        }
+
+        if(resultadoImc >= 29.0) {
+
+        document.getElementById("resultadoimc").innerText =
+            `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você é obeso.` ;
+
+        }
 
     }
-
-    if(resultadoImc > 25 && resultadoImc <= 29.9){
-
-    document.getElementById("resultado").innerText =
-        `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está com sobrepeso.` ;
-
-    }
-
-    if(resultadoImc >= 30) {
-
-    document.getElementById("resultado").innerText =
-        `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você é obeso.` ;
-
-    }
-    
     
 });
 
 //IMC
+
+//conversor de temperatura
+
 
 
     
