@@ -114,9 +114,7 @@ formImc.addEventListener("submit", function(event) {
     
 });
 
-//IMC
-
-//conversor de temperatura
+//CONVERSOR TEMPERATURA
 
 
 //°C → °F: C × 1.8 + 32
@@ -129,26 +127,31 @@ formtemp.addEventListener("submit", function(eventTemp) {
 
     const trocatemp = document.getElementById("temperaturaa").value;
 
+    console.log(trocatemp)
 
-    if (trocatemp === "celsius") {
+    const trocatemp2 = document.getElementById("trocatemp").value;
+
+
+    if (trocatemp2 === "celsius") {
 
     const resultTempcelsius = (trocatemp - 32) / 1.8;
 
      document.getElementById("resultadotemperatura").innerText =
-        resultTempcelsius;
+       `Conversão de Fahrenheit para Celsius é: ${resultTempcelsius.toFixed(2)} °C` ;
 
     }
 
-    else if(trocatemp === "fahrenheit")
+    else if(trocatemp2 === "fahrenheit")
         
         {
 
      const resultTempfahrenheit = (trocatemp * 1.8) + 32;
 
      document.getElementById("resultadotemperatura").innerText =
-        resultTempfahrenheit;
+        `Conversão de Celsius para Fahrenheit é:  ${resultTempfahrenheit.toFixed(2)}°F` ;
 
     }
+
 });
 
 

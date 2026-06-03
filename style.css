@@ -74,8 +74,8 @@ section {
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: 1200px;
-    height: 700px;
+    width: 97%;
+    height: 90%;
     border: none;
     border-radius: 7px;
     padding: 20px;
@@ -85,8 +85,19 @@ section {
 
 .ferramenta {
     display: none;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 50%;
+    height: 70%;
+    border: none;
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: 15px 10px 15px 10px rgba(0,0,0,0.1);
+    background-color: white;
 }
 
 .ferramenta.ativo {
     display: block;
+    
 }
