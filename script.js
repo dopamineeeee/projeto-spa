@@ -32,9 +32,9 @@ botoes.forEach(botao => {
 
  // IMC
 
-const form = document.getElementById("formimc");
+const formImc = document.getElementById("formimc");
 
-form.addEventListener("submit", function(event) {
+formImc.addEventListener("submit", function(event) {
     event.preventDefault(); // impede recarregar a página
 
     const peso = document.getElementById("peso").value;
@@ -46,8 +46,9 @@ form.addEventListener("submit", function(event) {
     const resultadoImc = peso/altura**2
     console.log(resultadoImc)
 
-    const sexo = document.getElementById("unidade").value;
+    const sexo = document.getElementById("trocasexo").value;
 
+    
     if (sexo === "homem") {
 
         if(resultadoImc <= 18.5){
@@ -118,8 +119,37 @@ form.addEventListener("submit", function(event) {
 //conversor de temperatura
 
 
+//°C → °F: C × 1.8 + 32
+//°F → °C: (F − 32) / 1.8
 
-    
+const formtemp = document.getElementById("formtemperatura");
+
+formtemp.addEventListener("submit", function(eventTemp) {
+    eventTemp.preventDefault();
+
+    const trocatemp = document.getElementById("temperaturaa").value;
+
+
+    if (trocatemp === "celsius") {
+
+    const resultTempcelsius = (trocatemp - 32) / 1.8;
+
+     document.getElementById("resultadotemperatura").innerText =
+        resultTempcelsius;
+
+    }
+
+    else if(trocatemp === "fahrenheit")
+        
+        {
+
+     const resultTempfahrenheit = (trocatemp * 1.8) + 32;
+
+     document.getElementById("resultadotemperatura").innerText =
+        resultTempfahrenheit;
+
+    }
+});
 
 
 
