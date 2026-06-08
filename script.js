@@ -155,4 +155,52 @@ formtemp.addEventListener("submit", function(eventTemp) {
 });
 
 
+//CONVERSOR VELOCIDADE
+
+//1 km/h = 0.621371 mph
+//1 mph = 1.6093km
+
+const formvelocidadee = document.getElementById("formvelocidade");
+
+formvelocidadee.addEventListener("submit", function(eventveloci){
+
+    eventveloci.preventDefault();
+
+    const trocaveloci = document.getElementById("trocavelocidade").value;
+
+    const velocidadecalculo = document.getElementById("velocidadee").value;
+
+    console.log (velocidadecalculo)
+
+    console.log(trocaveloci)
+
+    if (trocaveloci === "km") {
+
+
+    const resultparakm = velocidadecalculo*1.6093;
+
+    document.getElementById("resultadovelocidade").innerText =
+
+      `Conversão da velocidade de Milhas por hora para Kilometros por hora é:  ${resultparakm.toFixed(2)} KM/H` ;
+
+    }
+
+    else if (trocaveloci === "milhas"){
+
+
+        const resultparamilha = velocidadecalculo/0.6213;
+
+        document.getElementById("resultadovelocidade").innerText =
+
+         `Conversão da velocidade de Kilometros por hora para Milhas por hora é:  ${resultparamilha.toFixed(2)} MP/H` ;
+
+    }
+
+
+
+})
+
+
+
+
 
