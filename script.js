@@ -273,9 +273,6 @@ formvelocidadee.addEventListener("submit", function(eventveloci){
 //conversor de Moedas
 
 
-//Elemento moeda
-
-
 
 async function converterUSDparaBRL(valorUSD) {
     const response = await fetch(
@@ -287,6 +284,19 @@ async function converterUSDparaBRL(valorUSD) {
     const cotacao = Number(data.USDBRL.bid);
 
     return valorUSD * cotacao;
+}
+
+async function converterBRLparaUSD(valorBRL) {
+    const response2 = await fetch(
+        "https://economia.awesomeapi.com.br/json/last/USD-BRL"
+    );
+
+    const data2 = await response2.json();
+
+    const cotacao2 = Number(data2.USDBRL.bid);
+
+    return valorBRL / cotacao2 
+    
 }
 
 const formularioMoeda = document.getElementById("formMoeda");
@@ -302,8 +312,18 @@ formularioMoeda.addEventListener("submit", async function(eventmoeda) {
         const resultadoUSDxBRL = await converterUSDparaBRL(moedaa);
 
         document.getElementById("resultadomoeda").innerText =
-            `US$ ${moedaa.toFixed(2)} = R$ ${resultadoUSDxBRL.toFixed(2)}`;
+            `US$ ${moedaa.toFixed(2)} dolares convertido para reais é: R$ ${resultadoUSDxBRL.toFixed(2)}`;
+    }
+
+    else if (trocaDaMoeda === "dolar") {
+
+        const resultadoBRLxUSD = await converterBRLparaUSD(moedaa);
+        document.getElementById("resultadomoeda").innerText =
+            `R$ ${moedaa.toFixed(2)} reais convertido para dolares é: US$ ${resultadoBRLxUSD.toFixed(2)}`;
+
     }
 });
 
+
+// Conversor Massa
 

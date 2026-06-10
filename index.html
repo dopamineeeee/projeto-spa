@@ -38,10 +38,15 @@
 
                 <div id="moedas" class="ferramenta">
                     <h2>Conversor de Moedas</h2>
+
+                    
                 
                 <form id="formMoeda">
 
                     <input type="number" id="moeda" placeholder="Coloque o valor a ser convertido">
+
+                    <span>Coloque para qual moeda você quer converter</span>
+
                     <select id="trocamoeda">
                         <option value="dolar">Dolar</option>
                         <option value="real">Real</option>
@@ -62,13 +67,15 @@
                 <div id="imc" class="ferramenta">
                     <h2>Cálculo IMC</h2>
 
-                    <br>
-                    <br>
+                    
 
                     <form id="formimc">
 
                         <input id="peso" type="text" placeholder="Digite seu Peso">
                         <input id="altura" type="number" step="0.01" placeholder="Digite sua Altura">
+
+                        <span>Diga qual Gênero você quer calcular IMC</span>
+
                         <select id="trocasexo">
                             <option value="homem">Homem</option>
                             <option value="mulher">Mulher</option>
@@ -90,12 +97,14 @@
                 <div id="temperatura" class="ferramenta">
                     <h2>Conversor de Temperatura</h2>
 
-                    <br>
-                    <br>
+                    
 
                     <form id="formtemperatura">
 
                         <input id="temperaturaa" type="number" step="0.01" placeholder="Digite a Temperatura">
+
+                        <span>Coloque para qual temperatura você quer converter</span>
+
                         <select id="trocatemp">
                             <option value="celsius">Celsius</option>
                             <option value="fahrenheit">Fahrenheit</option>
@@ -118,6 +127,9 @@
                     <form id="formvelocidade">
 
                     <input id="velocidadee" type="number" step="0.01" placeholder="Digite a Velocidade para conversão">
+                    
+                    <span>Coloque para qual medida de velocidade você quer converter</span>
+                    
                     <select id="trocavelocidade">
                         <option value="km">KM/H</option>
                         <option value="milhas">MILHAS/H</option>
@@ -136,6 +148,24 @@
 
                 <div id="massa" class="ferramenta">
                     <h2>Conversor de Massa</h2>
+
+                    <form id="formMassa">
+
+                    <input type="number" id="massas" placeholder="Coloque o valor a ser convertido">
+                    <span>Coloque para qual medida você quer converter</span>
+                    <select id="trocamassas">
+                        <option value="quilogramas">Quilogramas</option>
+                        <option value="libras">Libras</option>
+                    </select>
+                    <button type="submit">Converter</button>
+
+                </form>
+
+                <br>
+                <br>
+
+                <p id="resultadomassa"></p>
+
                 </div>
 
                 <div id="regraTres" class="ferramenta">
@@ -149,7 +179,7 @@
     </main>
 
     <footer>
-        <h2>Criado por Eric de Oliveira Ferreira</h2>
+        <h3>Criado por Eric de Oliveira Ferreira</h3>
     </footer>
 
 </body>
