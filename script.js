@@ -37,20 +37,30 @@ const formImc = document.getElementById("formimc");
 formImc.addEventListener("submit", function(event) {
     event.preventDefault(); // impede recarregar a página
 
-    const peso = document.getElementById("peso").value;
-    const altura = document.getElementById("altura").value;
+    const peso = Number(document.getElementById("peso").value);
+    const altura = Number(document.getElementById("altura").value);
 
     console.log("Peso:", peso);
     console.log("Altura:", altura);
 
     const resultadoImc = peso/altura**2
+
+    if (!isFinite(resultadoImc)) {
+    document.getElementById("resultadoimc").innerText =
+        "Erro: altura inválida.";
+    return;
+    }
     console.log(resultadoImc)
 
     const sexo = document.getElementById("trocasexo").value;
 
+
     
     if (sexo === "homem") {
 
+       
+
+                
         if(resultadoImc <= 18.5){
 
         document.getElementById("resultadoimc").innerText =
@@ -58,10 +68,24 @@ formImc.addEventListener("submit", function(event) {
         
         }
 
+        else {
+                    
+        document.getElementById("resultadoimc").innerText =  
+          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
+
+        }
+
         if(resultadoImc > 18.5 && resultadoImc <= 24.9){
 
         document.getElementById("resultadoimc").innerText =
             `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está com peso normal.` ;
+
+        }
+
+        else {
+                    
+        document.getElementById("resultadoimc").innerText =  
+          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
 
         }
 
@@ -72,10 +96,24 @@ formImc.addEventListener("submit", function(event) {
 
         }
 
+        else {
+                    
+        document.getElementById("resultadoimc").innerText =  
+          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
+
+        }
+
         if(resultadoImc >= 30) {
 
         document.getElementById("resultadoimc").innerText =
             `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você é obeso.` ;
+
+        }
+
+        else {
+                    
+        document.getElementById("resultadoimc").innerText =  
+          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
 
         }
     }
@@ -89,12 +127,28 @@ formImc.addEventListener("submit", function(event) {
         
         }
 
+        else {
+                    
+        document.getElementById("resultadoimc").innerText =  
+          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
+
+        }
+
+
         if(resultadoImc > 18.5 && resultadoImc <= 23.9){
 
         document.getElementById("resultadoimc").innerText =
             `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você está com peso normal.` ;
 
         }
+
+        else {
+                    
+        document.getElementById("resultadoimc").innerText =  
+          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
+
+        }
+        
 
         if(resultadoImc > 24 && resultadoImc <= 28.9){
 
@@ -103,10 +157,24 @@ formImc.addEventListener("submit", function(event) {
 
         }
 
+        else {
+                    
+        document.getElementById("resultadoimc").innerText =  
+          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
+
+        }
+
         if(resultadoImc >= 29.0) {
 
         document.getElementById("resultadoimc").innerText =
             `Resultado do IMC é: ${resultadoImc.toFixed(2)}, você é obeso.` ;
+
+        }
+
+        else {
+                    
+        document.getElementById("resultadoimc").innerText =  
+          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
 
         }
 
@@ -202,5 +270,40 @@ formvelocidadee.addEventListener("submit", function(eventveloci){
 
 
 
+//conversor de Moedas
+
+
+//Elemento moeda
+
+
+
+async function converterUSDparaBRL(valorUSD) {
+    const response = await fetch(
+        "https://economia.awesomeapi.com.br/json/last/USD-BRL"
+    );
+
+    const data = await response.json();
+
+    const cotacao = Number(data.USDBRL.bid);
+
+    return valorUSD * cotacao;
+}
+
+const formularioMoeda = document.getElementById("formMoeda");
+
+formularioMoeda.addEventListener("submit", async function(eventmoeda) {
+    eventmoeda.preventDefault();
+
+    const trocaDaMoeda = document.getElementById("trocamoeda").value;
+    const moedaa = Number(document.getElementById("moeda").value);
+
+    if (trocaDaMoeda === "real") {
+
+        const resultadoUSDxBRL = await converterUSDparaBRL(moedaa);
+
+        document.getElementById("resultadomoeda").innerText =
+            `US$ ${moedaa.toFixed(2)} = R$ ${resultadoUSDxBRL.toFixed(2)}`;
+    }
+});
 
 
