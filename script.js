@@ -327,3 +327,43 @@ formularioMoeda.addEventListener("submit", async function(eventmoeda) {
 
 // Conversor Massa
 
+const formmassa = document.getElementById("formMassa");
+
+formmassa.addEventListener("submit", function(eventmassa){
+
+    eventmassa.preventDefault();
+
+    const trocamedida = document.getElementById("trocamassas").value;
+
+    const valormassa = document.getElementById("massas").value;
+
+    console.log (trocamedida)
+
+    console.log(valormassa)
+
+    if (trocamedida === "quilogramas") {
+
+
+    const resultparamassa = valormassa/2.20;
+
+    document.getElementById("resultadomassa").innerText =
+
+      `Conversão da massa de Libras para Quilogramas é:  ${resultparamassa.toFixed(2)} ` ;
+
+    }
+
+    else if (trocamedida === "libras"){
+
+
+        const resultparamassa = valormassa*2.20;
+
+        document.getElementById("resultadomassa").innerText =
+
+         `Conversão da massa de Quilogramas para Libras é:  ${resultparamassa.toFixed(2)} ` ;
+
+    }
+
+
+
+})
+
