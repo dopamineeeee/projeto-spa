@@ -35,7 +35,7 @@ botoes.forEach(botao => {
 const formImc = document.getElementById("formimc");
 
 formImc.addEventListener("submit", function(event) {
-    event.preventDefault(); // impede recarregar a página
+    event.preventDefault(); 
 
     const peso = Number(document.getElementById("peso").value);
     const altura = Number(document.getElementById("altura").value);
@@ -47,7 +47,7 @@ formImc.addEventListener("submit", function(event) {
 
     if (!isFinite(resultadoImc)) {
     document.getElementById("resultadoimc").innerText =
-        "Erro: altura inválida.";
+        "Erro: Altura inválida.";
     return;
     }
     console.log(resultadoImc)
