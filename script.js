@@ -68,12 +68,7 @@ formImc.addEventListener("submit", function(event) {
         
         }
 
-        else {
-                    
-        document.getElementById("resultadoimc").innerText =  
-          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
-
-        }
+       
 
         if(resultadoImc > 18.5 && resultadoImc <= 24.9){
 
@@ -82,12 +77,7 @@ formImc.addEventListener("submit", function(event) {
 
         }
 
-        else {
-                    
-        document.getElementById("resultadoimc").innerText =  
-          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
-
-        }
+        
 
         if(resultadoImc > 25 && resultadoImc <= 29.9){
 
@@ -96,12 +86,7 @@ formImc.addEventListener("submit", function(event) {
 
         }
 
-        else {
-                    
-        document.getElementById("resultadoimc").innerText =  
-          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
-
-        }
+        
 
         if(resultadoImc >= 30) {
 
@@ -110,12 +95,7 @@ formImc.addEventListener("submit", function(event) {
 
         }
 
-        else {
-                    
-        document.getElementById("resultadoimc").innerText =  
-          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
-
-        }
+        
     }
 
     else if (sexo === "mulher") {
@@ -127,12 +107,7 @@ formImc.addEventListener("submit", function(event) {
         
         }
 
-        else {
-                    
-        document.getElementById("resultadoimc").innerText =  
-          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
-
-        }
+        
 
 
         if(resultadoImc > 18.5 && resultadoImc <= 23.9){
@@ -142,12 +117,7 @@ formImc.addEventListener("submit", function(event) {
 
         }
 
-        else {
-                    
-        document.getElementById("resultadoimc").innerText =  
-          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
-
-        }
+        
         
 
         if(resultadoImc > 24 && resultadoImc <= 28.9){
@@ -157,12 +127,7 @@ formImc.addEventListener("submit", function(event) {
 
         }
 
-        else {
-                    
-        document.getElementById("resultadoimc").innerText =  
-          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
-
-        }
+        
 
         if(resultadoImc >= 29.0) {
 
@@ -171,12 +136,7 @@ formImc.addEventListener("submit", function(event) {
 
         }
 
-        else {
-                    
-        document.getElementById("resultadoimc").innerText =  
-          `Erro: Verifique se o peso e a altura foram digitados corretamente.`;
-
-        }
+        
 
     }
     
