@@ -336,25 +336,26 @@ formregratress.addEventListener("submit", function(eventregra){
 
     eventregra.preventDefault();
 
-    const valorA = document.getElementById("valorA").value;
+    const valorA = Number(document.getElementById("valorA").value);
 
-    const valorB = document.getElementById("valorB").value;
+    const valorB = Number(document.getElementById("valorB").value);
 
-    const valorC = document.getElementById("valorC").value;
+    const valorC = Number(document.getElementById("valorC").value);
 
     console.log(valorA)
     console.log(valorB)
     console.log(valorC)
 
-    const resultadoalgebra1 = valorC*valorB
+    const resultadoalgebra = (valorC*valorB)/valorA
 
-    const resultadoalgebra2 = resultadoalgebra1/valorA
 
-    if(resultadoalgebra2 === 0){
+    console.log(resultadoalgebra)
 
+    if(!isFinite(resultadoalgebra)){
+
+        
         document.getElementById("resultadoregraTres").innerText =
-
-    `Valor de x é: 1`
+        `Não é possível efetuar o calculo. Colocar um valor Válido.`
 
 
     }
@@ -363,7 +364,7 @@ formregratress.addEventListener("submit", function(eventregra){
 
     document.getElementById("resultadoregraTres").innerText =
 
-    `Valor de x é: ${resultadoalgebra2}`
+    `Valor de x é: ${resultadoalgebra.toFixed(2)}`
 
     }
 
