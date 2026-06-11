@@ -135,3 +135,24 @@ input {
 
 
 }
+
+#formRegraTres {
+
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.ladoesquerdo {
+
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.ladodireito {
+
+    flex-direction: column;
+    align-content: center;
+
+}

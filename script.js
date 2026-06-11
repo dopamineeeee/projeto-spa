@@ -367,3 +367,45 @@ formmassa.addEventListener("submit", function(eventmassa){
 
 })
 
+
+//Regra três
+
+const formregratress = document.getElementById("formRegraTres");
+
+formregratress.addEventListener("submit", function(eventregra){
+
+    eventregra.preventDefault();
+
+    const valorA = document.getElementById("valorA").value;
+
+    const valorB = document.getElementById("valorB").value;
+
+    const valorC = document.getElementById("valorC").value;
+
+    console.log(valorA)
+    console.log(valorB)
+    console.log(valorC)
+
+    const resultadoalgebra1 = valorC*valorB
+
+    const resultadoalgebra2 = resultadoalgebra1/valorA
+
+    if(resultadoalgebra2 === 0){
+
+        document.getElementById("resultadoregraTres").innerText =
+
+    `Valor de x é: 1`
+
+
+    }
+
+    else{
+
+    document.getElementById("resultadoregraTres").innerText =
+
+    `Valor de x é: ${resultadoalgebra2}`
+
+    }
+
+})
+
