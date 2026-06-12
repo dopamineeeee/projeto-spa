@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none
 }
 
 body {
@@ -10,25 +11,38 @@ body {
     height: 100vh;
 }
 
-header,
+header{
+
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+    padding: 10px;
+
+
+}
+
+
 footer {
     display: flex;
     justify-content: center;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     padding: 10px;
 }
 
 main {
     display: flex;
     flex-grow: 1;
-    background: gray;
+    background: white;
 }
 
 aside {
 
     width: 15%;
-    background: gray;
+    background: white;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -41,10 +55,10 @@ aside button {
 
     width: 140px;
     height: 70px;
-    border: none;
+    border: 2px solid black;
     border-radius: 10px;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     cursor: pointer;
 
 }
@@ -88,7 +102,7 @@ button {
     border-radius: 7px;
     padding: 20px;
     box-shadow: 15px 10px 15px 10px rgba(0,0,0,0.1);
-    background-color: azure;
+    background-color: gainsboro;
 }
 
 .ferramenta {
@@ -103,12 +117,13 @@ button {
     border-radius: 7px;
     padding: 20px;
     box-shadow: 15px 10px 15px 10px rgba(0,0,0,0.1);
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 
 }
 
 .ferramenta.ativo {
+    
     display: block;
     
 }
@@ -155,5 +170,19 @@ input {
 
     flex-direction: column;
     align-content: center;
+
+}
+
+
+
+.darkmode {
+
+    display: none;
+
+}
+
+.darkmode.ativo {
+
+    display: block;
 
 }
